@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Villa - Details</title>
+  
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background: crimson;
+      padding: 10px 15px;
+    }
+
+    .navdiv {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo a {
+      font-size: 28px;
+      font-weight: 600;
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    li a {
+      color: white;
+      font-weight: bold;
+      margin-right: 20px;
+    }
+
+    nav button {
+      background-color: black;
+      border-radius: 10px;
+      padding: 8px 15px;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav button a {
+      color: white;
+      font-size: 14px;
+      margin-right: 0;
+    }
+
+    /* Details Layout Styles */
+    .details-wrapper {
+      padding: 40px 10%;
+    }
+
+    .back-nav {
+      margin-bottom: 20px;
+    }
+
+    .back-nav a {
+      color: crimson;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .property-hero {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .main-img-large {
+      flex: 2;
+      min-width: 300px;
+      height: 450px;
+      border-radius: 15px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .property-info-box {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .property-info-box h1 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .location {
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .price-tag {
+      font-size: 28px;
+      color: crimson;
+      font-weight: bold;
+      display: block;
+      margin: 15px 0;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 25px;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+    }
+
+    .specs-grid span {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .contact-agent-btn {
+      width: 100%;
+      padding: 15px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-agent-btn:hover {
+      background: crimson;
+    }
+
+    .property-description {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      line-height: 1.8;
+      color: #444;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .property-description h2 {
+      color: crimson;
+      margin-top: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .details-wrapper {
+        padding: 20px 5%;
+      }
+      .main-img-large {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">Spotlight Properties</a></div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <button><a href="#">Sign In</a></button>
+          </ul>
+        </div>
+    </nav>
+
+    <main class="details-wrapper">
+        <div class="back-nav">
+            <a href="index.html">&larr; Back to Listings</a>
+        </div>
+
+        <section class="property-hero">
+            <div class="main-img-large" style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80')"></div>
+            
+            <div class="property-info-box">
+                <h1>Modern Villa</h1>
+                <p class="location">Beverly Hills, Karachi</p>
+                <span class="price-tag">Rs. 2.5 Crore</span>
+                
+                <div class="specs-grid">
+                    <span><strong>4</strong> Bedrooms</span>
+                    <span><strong>3</strong> Bathrooms</span>
+                    <span><strong>2500</strong> Sqft</span>
+                    <span><strong>2</strong> Parking</span>
+                </div>
+
+                <button class="contact-agent-btn">Contact Agent</button>
+            </div>
+        </section>
+
+        <section class="property-description">
+            <h2>About this Property</h2>
+            <p>This stunning modern villa features an open-concept floor plan with premium finishes. It includes a designer kitchen with marble countertops, a spacious backyard perfect for gatherings, and full smart home integration for your security and comfort. Located in the heart of Beverly Hills, Karachi, it offers both luxury and peace of mind for modern families.</p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunset Apartment - Details</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #f9f9f9; }
+    a { text-decoration: none; }
+    
+    .navbar { background: crimson; padding: 15px 10%; display: flex; justify-content: space-between; align-items: center; }
+    .logo a { font-size: 25px; font-weight: bold; color: white; }
+    .home-link { color: white; font-weight: bold; }
+
+    .details-wrapper { padding: 50px 10%; }
+    .back-nav { margin-bottom: 20px; }
+    .back-nav a { color: crimson; font-weight: bold; }
+
+    .property-hero { display: flex; gap: 30px; flex-wrap: wrap; }
+    .main-img-large { 
+        flex: 2; min-width: 300px; height: 450px; border-radius: 15px;
+        background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80');
+        background-size: cover; background-position: center;
+    }
+
+    .property-info-box { 
+        flex: 1; min-width: 300px; background: white; padding: 30px; 
+        border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    }
+
+    .price-tag { font-size: 28px; color: crimson; font-weight: bold; display: block; margin: 15px 0; }
+    
+    .specs-grid { 
+        display: grid; grid-template-columns: 1fr 1fr; gap: 10px; 
+        margin: 20px 0; padding-top: 15px; border-top: 1px solid #eee; 
+    }
+    .specs-grid span { background: #f4f4f4; padding: 10px; border-radius: 5px; text-align: center; }
+
+    .contact-btn { 
+        width: 100%; padding: 15px; background: black; color: white; 
+        border: none; border-radius: 8px; cursor: pointer; font-size: 16px; 
+    }
+    .contact-btn:hover { background: crimson; }
+
+    .description { margin-top: 40px; background: white; padding: 30px; border-radius: 15px; line-height: 1.6; }
+    .description h2 { color: crimson; }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Spotlight Properties</a></div>
+        <a href="index.html" class="home-link">Home</a>
+    </nav>
+
+    <main class="details-wrapper">
+        <div class="back-nav"><a href="index.html">&larr; Back to Listings</a></div>
+
+        <section class="property-hero">
+            <div class="main-img-large"></div>
+            
+            <div class="property-info-box">
+                <h1>Sunset Apartment</h1>
+                <p>Downtown, Karachi</p>
+                <span class="price-tag">Rs. 1.5 Crore</span>
+                
+                <div class="specs-grid">
+                    <span><strong>2</strong> Bed</span>
+                    <span><strong>2</strong> Bath</span>
+                    <span><strong>1200</strong> Sqft</span>
+                    <span><strong>1</strong> Balcony</span>
+                </div>
+                <button class="contact-btn">Contact Agent</button>
+            </div>
+        </section>
+
+        <section class="description">
+            <h2>Property Description</h2>
+            <p>Experience urban living at its finest in this Sunset Apartment. Located on the 12th floor, it offers breathtaking views of the city skyline. This unit comes with high-quality flooring, built-in wardrobes, and access to a rooftop swimming pool and gym. Ideal for young professionals or small families.</p>
+        </section>
+    </main>
+</body>
+</html>
