@@ -25,30 +25,69 @@
       <div class="hero-content">
         <h1>Find Your Dream Home</h1>
         <p>Discover the best properties in the heart of the city.</p>
+        
+        <div class="search-wrapper">
+          <div class="search-bar">
+            <input type="text" id="propertySearch" onkeyup="runSearch()" placeholder="Try 'Karachi', 'Villa', or '0.8'...">
+            <button class="search-icon-btn">🔍</button>
+          </div>
+        </div>
       </div>
     </header>
     
+   
+    
     <section class="property-container">
       <h2>Featured Listings</h2>
-      <div class="card-grid">
+      <div class="card-grid" id="propertyGrid">
         
-        <div class="card">
+        <div class="card" data-city="Karachi" data-area="Beverly Hills" data-price="2.5">
           <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=400&q=80')"></div>
           <div class="card-details">
             <h3>Modern Villa</h3>
-            <p>4 Bed | 3 Bath | 2500 sqft</p>
+            <p>Beverly Hills, Karachi</p>
             <span class="price">2.5 Crore</span>
             <a href="villa-details.html" class="detail-btn">View Details</a>
           </div>
         </div>
-        
-        <div class="card">
+    
+        <div class="card" data-city="Karachi" data-area="Downtown" data-price="1.5">
           <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=400&q=80')"></div>
           <div class="card-details">
             <h3>Sunset Apartment</h3>
-            <p>2 Bed | 2 Bath | 1200 sqft</p>
+            <p>Downtown, Karachi</p>
             <span class="price">1.5 Crore</span>
             <a href="sunset-detail.html" class="detail-btn">View Details</a>
+          </div>
+        </div>
+    
+        <div class="card" data-city="Islamabad" data-area="Gulberg" data-price="4.2">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=400&q=80')"></div>
+          <div class="card-details">
+            <h3>Royal Penthouse</h3>
+            <p>Gulberg, Islamabad</p>
+            <span class="price">4.2 Crore</span>
+            <a href="royal-penthouse.html" class="detail-btn">View Details</a>
+          </div>
+        </div>
+    
+        <div class="card" data-city="Lahore" data-area="Johar Town" data-price="0.8">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80')"></div>
+          <div class="card-details">
+            <h3>Cozy Studio</h3>
+            <p>Johar Town, Lahore</p>
+            <span class="price">0.8 Crore</span>
+            <a href="cozy-studio.html" class="detail-btn">View Details</a>
+          </div>
+        </div>
+    
+        <div class="card" data-city="Islamabad" data-area="E-7" data-price="6.5">
+          <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=400&q=80')"></div>
+          <div class="card-details">
+            <h3>Lakeside Bungalow</h3>
+            <p>Sector E-7, Islamabad</p>
+            <span class="price">6.5 Crore</span>
+            <a href="lakeside-bungalow.html" class="detail-btn">View Details</a>
           </div>
         </div>
     
@@ -81,5 +120,31 @@
         &copy; 2026 Spotlight Properties | Designed by Farhan
       </div>
     </footer>
+
+    <script>
+      function runSearch() {
+        // Get what the user typed
+        let input = document.getElementById('propertySearch').value.toLowerCase();
+        let cards = document.getElementsByClassName('card');
+    
+        for (let i = 0; i < cards.length; i++) {
+          // Get the Name from the <h3> tag inside the card
+          let propertyName = cards[i].querySelector('h3').innerText.toLowerCase();
+          
+          // Get the other details from attributes
+          let city = cards[i].getAttribute('data-city').toLowerCase();
+          let area = cards[i].getAttribute('data-area').toLowerCase();
+          let price = cards[i].getAttribute('data-price').toLowerCase();
+    
+          // Check if the input matches Name OR City OR Area OR Price
+          if (propertyName.includes(input) || city.includes(input) || area.includes(input) || price.includes(input)) {
+            cards[i].style.display = "block";
+          } else {
+            cards[i].style.display = "none";
+          }
+        }
+      }
+    </script>
 </body>
 </html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Studio - Details</title>
+  <style>
+    /* Internal CSS shared across pages for consistency */
+    body { margin: 0; font-family: sans-serif; background: #f9f9f9; color: #333; }
+    .navbar { background: crimson; padding: 15px 10%; display: flex; justify-content: space-between; align-items: center; }
+    .logo a { font-size: 25px; font-weight: bold; color: white; text-decoration: none; }
+    .back-nav { padding: 30px 10% 10px 10%; }
+    .back-nav a { color: crimson; text-decoration: none; font-weight: bold; }
+    .details-container { padding: 20px 10%; display: flex; gap: 40px; flex-wrap: wrap; }
+    .image-section { flex: 2; min-width: 350px; }
+    .image-section img { width: 100%; height: 450px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    .info-section { flex: 1; min-width: 300px; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: fit-content; }
+    .price-tag { font-size: 30px; color: crimson; font-weight: bold; display: block; margin: 15px 0; }
+    .specs { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+    .spec-item { background: #f4f4f4; padding: 10px; border-radius: 8px; text-align: center; font-size: 14px; }
+    .btn-contact { width: 100%; padding: 15px; background: black; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; transition: 0.3s; }
+    .btn-contact:hover { background: crimson; }
+    .description { padding: 40px 10%; line-height: 1.8; }
+    .description h2 { color: crimson; }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Spotlight Properties</a></div>
+    </nav>
+    <div class="back-nav"><a href="index.html">&larr; Back to Listings</a></div>
+    <main class="details-container">
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Studio">
+        </div>
+        <div class="info-section">
+            <h1>Cozy Studio</h1>
+            <p>📍 Johar Town, Lahore</p>
+            <span class="price-tag">Rs. 0.8 Crore</span>
+            <div class="specs">
+                <div class="spec-item"><strong>1</strong> Bedroom</div>
+                <div class="spec-item"><strong>1</strong> Bathroom</div>
+                <div class="spec-item"><strong>600</strong> Sqft</div>
+                <div class="spec-item"><strong>Furnished</strong></div>
+            </div>
+            <button class="btn-contact">Contact Agent</button>
+        </div>
+    </main>
+    <section class="description">
+        <h2>Property Description</h2>
+        <p>Perfect for young professionals or students, this cozy studio in Johar Town offers modern living in a compact space. The unit comes fully furnished with high-quality woodwork, a built-in kitchenette, and 24/7 security. Located within walking distance of major shopping malls and restaurants.</p>
+    </section>
+</body>
+</html>
